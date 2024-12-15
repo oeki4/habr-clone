@@ -2,5 +2,7 @@
   "Тестовый пример": "Test example",
   "Перевод": "Translate",
   "Язык": "Language",
-  "Страница не найдена": "Page not found"
+  "Страница не найдена": "Page not found",
+  "Произошла непредвиденная ошибка": "An unexpected error occurred",
+  "Обновить страницу": "Refresh page"
 }
