@@ -1,10 +1,10 @@
-import {MaybeMockedDeep} from "@storybook/test";
 import {StateSchema} from "app/providers/StoreProvider";
 import {getCounterValue} from "./getCounterValue";
+import {DeepPartial} from "shared/config/tests/componentRender/componentRender";
 
 describe('getCounterValue', () => {
 	test('should return counter value', () => {
-		const state: MaybeMockedDeep<StateSchema> = {
+		const state: DeepPartial<StateSchema> = {
 			counter: {value: 10},
 		}
 		expect(getCounterValue(state as StateSchema)).toEqual(10);

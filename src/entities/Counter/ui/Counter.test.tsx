@@ -10,7 +10,7 @@ describe('Counter', () => {
 			initialState: {
 				counter: {
 					value: 10,
-				}
+				},
 			}
 		});
 		expect(screen.getByTestId("value-title")).toHaveTextContent('value: 10');

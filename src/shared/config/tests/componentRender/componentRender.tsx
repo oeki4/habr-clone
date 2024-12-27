@@ -4,11 +4,14 @@ import {I18nextProvider} from "react-i18next";
 import {MemoryRouter} from "react-router";
 import i18nForTests from "shared/config/i18n/i18nForTests";
 import {StateSchema, StoreProvider} from "app/providers/StoreProvider";
-import {MaybeMockedDeep} from "@storybook/test";
+
+export type DeepPartial<T> = T extends object ? {
+	[P in keyof T]?: DeepPartial<T[P]>;
+} : T;
 
 export interface ComponentRenderOptions {
 	route?: string;
-	initialState?: MaybeMockedDeep<StateSchema>
+	initialState?: DeepPartial<StateSchema>
 }
 
 export function componentRender(component: ReactNode, options: ComponentRenderOptions = {}) {
