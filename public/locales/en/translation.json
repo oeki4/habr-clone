@@ -1,8 +1,14 @@
 {
   "Тестовый пример": "Test example",
   "Перевод": "Translate",
-  "Язык": "Language",
+  "Язык": "English",
   "Страница не найдена": "Page not found",
   "Произошла непредвиденная ошибка": "An unexpected error occurred",
-  "Обновить страницу": "Refresh page"
+  "Обновить страницу": "Refresh page",
+  "О сайте": "About",
+  "Главная": "Home",
+  "Короткий язык": "EN",
+  "Войти": "Auth",
+  "Введите имя": "Enter username",
+  "Введите пароль": "Enter password"
 }
