@@ -1,6 +1,6 @@
 import {getCounter} from "./getCounter";
 import {StateSchema} from "app/providers/StoreProvider";
-import {DeepPartial} from "shared/config/tests/componentRender/componentRender";
+import {DeepPartial} from "shared/config/types/DeepPartial";
 
 describe('getCounter()', () => {
 	test('should return counter value', () => {
