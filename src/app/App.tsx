@@ -6,6 +6,7 @@ import {Sidebar} from "widgets/Sidebar";
 import {Suspense, useEffect} from "react";
 import {useDispatch} from "react-redux";
 import {userActions} from "entities/User";
+import {useNavigate} from "react-router";
 
 const App = () => {
 	const {theme} = useTheme();

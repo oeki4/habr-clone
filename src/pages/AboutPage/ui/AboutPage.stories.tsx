@@ -12,11 +12,8 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 
-export const Normal: Story = {
-	args: {},
-};
+export const Normal: Story = {};
 
 export const Dark: Story = {
 	decorators: [ThemeDecorator(Theme.DARK)],
-	args: {},
 };

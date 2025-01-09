@@ -3,11 +3,14 @@ import {ThemeDecorator} from "shared/config/storybook/ThemeDecorator/ThemeDecora
 import {Theme} from "app/providers/ThemeProvider";
 import LoginForm from "./LoginForm";
 import {StoreDecorator} from "shared/config/storybook/StoreDecorator/StoreDecorator";
+import {fn} from "@storybook/test";
 
 const meta = {
 	title: 'features/LoginForm',
 	component: LoginForm,
-	args: {},
+	args: {
+		onSuccess: fn,
+	},
 } satisfies Meta<typeof LoginForm>;
 
 export default meta;

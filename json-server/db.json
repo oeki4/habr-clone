@@ -1,9 +1,25 @@
 {
   "posts": [
-    {"id":  1, "title": "json-server", "author": "typicode"},
-    {"id":  2, "title": "json-server2", "author": "typicode"},
-    {"id":  3, "title": "json-server3", "author": "typicode"},
-    {"id":  4, "title": "json-server4", "author": "typicode"}
+    {
+      "id": "1",
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": "2",
+      "title": "json-server2",
+      "author": "typicode"
+    },
+    {
+      "id": "3",
+      "title": "json-server3",
+      "author": "typicode"
+    },
+    {
+      "id": "4",
+      "title": "json-server4",
+      "author": "typicode"
+    }
   ],
   "users": [
     {
@@ -13,7 +29,20 @@
     }
   ],
   "comments": [
-    {"id":  1, "body": "some comment", "postId": 1}
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
   ],
-  "profile": {"name": "typicode"}
+  "profile": {
+    "first": "Никита",
+    "lastname": "Хрячков",
+    "age": 19,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Voronezh",
+    "username": "god",
+    "avatar": "https://freepngimg.com/download/temp_jpeg/11-2-anonymous-mask-png-image.jpeg"
+  }
 }
