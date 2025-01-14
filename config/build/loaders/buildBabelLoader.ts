@@ -1,4 +1,4 @@
-export function buildBabelLoader() {
+export function buildBabelLoader(isDev: boolean) {
 	return {
 		test: /\.(js|ts|tsx)$/,
 		exclude: /node_modules/,
@@ -13,8 +13,9 @@ export function buildBabelLoader() {
 							locales: ['ru', 'en'],
 							keyAsDefaultValue: true,
 						}
-					]
-				]
+					],
+					isDev && require.resolve('react-refresh/babel'),
+				].filter(Boolean),
 			}
 		}
 	}
