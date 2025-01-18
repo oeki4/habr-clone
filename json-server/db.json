@@ -25,12 +25,14 @@
     {
       "id": 1,
       "username": "admin",
-      "password": "123"
+      "password": "123",
+      "avatar": "https://freepngimg.com/download/temp_jpeg/11-2-anonymous-mask-png-image.jpeg"
     },
     {
       "id": 2,
       "username": "user",
-      "password": "123"
+      "password": "123",
+      "avatar": "https://freepngimg.com/download/temp_jpeg/11-2-anonymous-mask-png-image.jpeg"
     }
   ],
   "articles": [
