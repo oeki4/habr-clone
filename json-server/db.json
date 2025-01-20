@@ -43,7 +43,9 @@
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png",
       "views": 2021,
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -124,16 +126,66 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": 1,
+      "text": "121221",
+      "id": "OdnGq7x"
+    },
+    {
+      "articleId": "1",
+      "userId": 1,
+      "text": "1212",
+      "id": "mHyseGj"
+    },
+    {
+      "articleId": "1",
+      "userId": 1,
+      "text": "12121212112",
+      "id": "5huCnz_"
+    },
+    {
+      "articleId": "1",
+      "userId": 1,
+      "text": "122121",
+      "id": "jTB--ZZ"
+    },
+    {
+      "articleId": "1",
+      "userId": 1,
+      "text": "122121",
+      "id": "SyCWbBZ"
+    },
+    {
+      "articleId": "1",
+      "userId": 1,
+      "text": "1212",
+      "id": "82bkApG"
     }
   ],
-  "profile": {
-    "first": "Никита",
-    "lastname": "Хрячков",
-    "age": 19,
-    "currency": "RUB",
-    "country": "Russia",
-    "city": "Voronezh",
-    "username": "god",
-    "avatar": "https://freepngimg.com/download/temp_jpeg/11-2-anonymous-mask-png-image.jpeg"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Ник",
+      "lastname": "Хрячков",
+      "age": 19,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Voronezh",
+      "username": "god",
+      "avatar": "https://freepngimg.com/download/temp_jpeg/11-2-anonymous-mask-png-image.jpeg"
+    },
+    {
+      "id": "2",
+      "first": "Никита",
+      "lastname": "Barmalej",
+      "age": 23,
+      "currency": "USD",
+      "country": "Russia",
+      "city": "Voronezh",
+      "username": "barmalej",
+      "avatar": "https://thumbs.dreamstime.com/b/hacker-looking-camera-face-mask-dark-theme-wallpaper-hacker-looking-camera-face-mask-dark-theme-wallpaper-291465611.jpg"
+    }
+  ]
 }

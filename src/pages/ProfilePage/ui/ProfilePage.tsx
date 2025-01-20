@@ -6,7 +6,7 @@ import {
     ProfileCard,
     profileReducer, ValidateProfileError
 } from "entities/Profile";
-import {useCallback, useEffect} from "react";
+import {useCallback} from "react";
 import {useAppDispatch} from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 import {useSelector} from "react-redux";
 import {ProfilePageHeader} from "./ProfilePageHeader/ProfilePageHeader";
@@ -14,6 +14,8 @@ import {Currency} from "entities/Currency";
 import {Country} from "entities/Country";
 import {Text, TextTheme} from "shared/ui/Text/Text";
 import {useTranslation} from "react-i18next";
+import {useInitialEffect} from "shared/lib/hooks/useInitialEffect/useInitialEffect";
+import {useParams} from "react-router";
 
 const reducers: ReducersList = {
     profile: profileReducer,
@@ -27,6 +29,7 @@ const ProfilePage = () => {
     const dispatch = useAppDispatch();
     const validateErrors = useSelector(getProfileValidateErrors);
     const {t} = useTranslation('profile');
+		const {id} = useParams<{id: string}>();
 
     const validateErrorTranslates = {
         [ValidateProfileError.SERVER_ERROR]: t('Ошибка сервера'),
@@ -36,11 +39,11 @@ const ProfilePage = () => {
         [ValidateProfileError.NO_DATA]: t('Не заполнены данные'),
     }
 
-    useEffect(() => {
-        if(__PROJECT__ !== 'storybook') {
-            dispatch(fetchProfileData());
-        }
-    }, [dispatch]);
+		useInitialEffect(() => {
+			if(id) {
+				dispatch(fetchProfileData(id));
+			}
+		})
 
     const onChangeFirstName = useCallback((value?: string) => {
         dispatch(profileActions.updateProfile({

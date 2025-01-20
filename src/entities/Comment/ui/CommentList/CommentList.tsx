@@ -16,11 +16,21 @@ export const CommentList = memo(({className, comments, isLoading}: CommentListPr
 
 	const {t} = useTranslation();
 
+	if(isLoading) {
+		return (
+			<div className={classNames(cls.CommentList, {}, [className])}>
+				<CommentCard isLoading/>
+				<CommentCard isLoading/>
+				<CommentCard isLoading/>
+			</div>
+		)
+	}
+
 	return (
 		<div className={classNames(cls.CommentList, {}, [className])}>
 			{
 				comments?.length
-				? comments.map((comment) => (
+					? comments.map((comment) => (
 						<CommentCard isLoading={isLoading} className={cls.comment} comment={comment}/>
 					))
 					: <Text text={t("Комментарив пока нет...")}/>

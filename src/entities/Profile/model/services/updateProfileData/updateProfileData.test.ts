@@ -12,6 +12,7 @@ const data = {
     first: 'Никита',
     city: '123',
     currency: Currency.USD,
+		id: '1'
 }
 
 describe("updateProfileData", () => {
