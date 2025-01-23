@@ -1,29 +1,20 @@
 import type {Meta, StoryObj} from '@storybook/react';
-import ArticleDetailsPage from './ArticleDetailsPage';
-import {StoreDecorator} from "shared/config/storybook/StoreDecorator/StoreDecorator";
-import {Article} from "entities/Article";
+import {ArticleList} from './ArticleList';
+import {Article, ArticleView} from "entities/Article";
 import {ArticleBlockType, ArticleType} from "entities/Article/model/types/article";
 
-const meta = {
-	title: 'pages/ArticleDetailsPage',
-	component: ArticleDetailsPage,
-	args: {},
-} satisfies Meta<typeof ArticleDetailsPage>;
-
-export default meta;
-type Story = StoryObj<typeof meta>;
 const article: Article = {
 	"id": "1",
 	"title": "Article title",
 	"subtitle": "Article subtitle",
-	"img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png",
+	"img": "",
 	"views": 2021,
 	"createdAt": "26.02.2022",
 	"type": [ArticleType.IT],
 	"user": {
 		"id": "1",
 		"username": "admin",
-		"avatar": "https://freepngimg.com/download/temp_jpeg/11-2-anonymous-mask-png-image.jpeg"
+		"avatar": ""
 	},
 	"blocks": [
 		{
@@ -53,7 +44,7 @@ const article: Article = {
 		{
 			"id": "2",
 			"type": ArticleBlockType.IMAGE,
-			"src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
+			"src": "",
 			"title": "Рисунок 1 - скриншот сайта"
 		},
 		{
@@ -73,7 +64,7 @@ const article: Article = {
 		{
 			"id": "8",
 			"type": ArticleBlockType.IMAGE,
-			"src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
+			"src": "",
 			"title": "Рисунок 1 - скриншот сайта"
 		},
 		{
@@ -87,11 +78,42 @@ const article: Article = {
 	]
 }
 
-export const Primary: Story = {
-	decorators: [StoreDecorator({
-		articleDetails: {
-			data: article
-		}
-	})],
+const meta = {
+	title: 'entities/Article/ArticleList',
+	component: ArticleList,
 	args: {},
+} satisfies Meta<typeof ArticleList>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Small: Story = {
+	args: {
+		view: ArticleView.SMALL,
+		articles: new Array(16).fill(0).map((el) => article),
+	},
+};
+
+
+export const Big: Story = {
+	args: {
+		view: ArticleView.BIG,
+		articles: new Array(16).fill(0).map((el) => article),
+	},
+};
+
+export const SmallLoading: Story = {
+	args: {
+		isLoading: true,
+		view: ArticleView.SMALL,
+		articles: new Array(16).fill(0).map((el) => article),
+	},
+};
+
+export const BigLoading: Story = {
+	args: {
+		isLoading: true,
+		view: ArticleView.BIG,
+		articles: new Array(16).fill(0).map((el) => article),
+	},
 };

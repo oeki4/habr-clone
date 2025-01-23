@@ -18,6 +18,11 @@ const article: Article = {
 	"views": 2021,
 	"createdAt": "26.02.2022",
 	"type": [ArticleType.IT],
+	"user": {
+		"id": "1",
+		"username": "admin",
+		"avatar": "https://freepngimg.com/download/temp_jpeg/11-2-anonymous-mask-png-image.jpeg"
+	},
 	"blocks": [
 	{
 		"id": "1",
