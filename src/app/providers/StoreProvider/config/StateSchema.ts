@@ -14,11 +14,13 @@ import {ArticleDetailsSchema} from "entities/Article";
 import {ArticleDetailsCommentsSchema} from "pages/ArticleDetailsPage";
 import {AddCommentFormSchema} from "features/addCommentForm";
 import {ArticlePageSchema} from "pages/ArticlesPage";
+import {UISchema} from "features/ui";
 
 
 export interface StateSchema {
 	counter: CounterSchema;
 	user: UserSchema;
+	ui: UISchema;
 
 	loginForm: LoginSchema;
 	profile: ProfileSchema;
