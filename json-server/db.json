@@ -41,8 +41,8 @@
       "title": "Article title",
       "subtitle": "Article subtitle",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png",
-      "views": 2021,
-      "createdAt": "26.02.2022",
+      "views": 100,
+      "createdAt": "26.03.2023",
       "userId": "1",
       "type": [
         "IT"
@@ -112,9 +112,9 @@
       "id": "2",
       "title": "Article title2",
       "subtitle": "Article subtitle",
-      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png",
-      "views": 2021,
-      "createdAt": "26.02.2022",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAOfeZ2cPF7HK2MsDs9giW1wkT9VFPCObW-A&s",
+      "views": 349,
+      "createdAt": "21.05.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -136,9 +136,9 @@
       "id": "3",
       "title": "Article title3",
       "subtitle": "Article subtitle",
-      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png",
-      "views": 2021,
-      "createdAt": "26.02.2022",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Webysther_20160423_-_Elephpant.svg/1200px-Webysther_20160423_-_Elephpant.svg.png",
+      "views": 578,
+      "createdAt": "16.02.2024",
       "userId": "1",
       "type": [
         "IT"
@@ -160,9 +160,9 @@
       "id": "4",
       "title": "Article title4",
       "subtitle": "Article subtitle",
-      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png",
-      "views": 2021,
-      "createdAt": "26.02.2022",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhDISWFIUp0hbEmOKDGfJK1AI4dTsoUWoeGQ&s",
+      "views": 8932,
+      "createdAt": "21.08.2021",
       "userId": "1",
       "type": [
         "IT"
@@ -184,12 +184,12 @@
       "id": "5",
       "title": "Article title5",
       "subtitle": "Article subtitle",
-      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png",
-      "views": 2021,
-      "createdAt": "26.02.2022",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFIsyP4_1cqzAiMaa9LgGQI1AwbbeK_FpDEg&s",
+      "views": 10000,
+      "createdAt": "24.01.2025",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
