@@ -11,10 +11,11 @@ import {ProfileSchema} from "entities/Profile";
 import {AxiosInstance} from "axios";
 import {NavigateOptions, To} from "react-router";
 import {ArticleDetailsSchema} from "entities/Article";
-import {ArticleDetailsCommentsSchema} from "pages/ArticleDetailsPage";
+import {ArticleDetailsCommentsSchema, ArticleDetailsPageRecommendationSchema} from "pages/ArticleDetailsPage";
 import {AddCommentFormSchema} from "features/addCommentForm";
 import {ArticlePageSchema} from "pages/ArticlesPage";
 import {UISchema} from "features/ui";
+import {ArticleDetailsPageSchema} from "pages/ArticleDetailsPage/model/types";
 
 
 export interface StateSchema {
@@ -25,9 +26,9 @@ export interface StateSchema {
 	loginForm: LoginSchema;
 	profile: ProfileSchema;
 	articleDetails: ArticleDetailsSchema;
-	articleDetailsComments: ArticleDetailsCommentsSchema;
 	addCommentForm: AddCommentFormSchema;
 	articlesPage: ArticlePageSchema;
+	articleDetailsPage: ArticleDetailsPageSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;
