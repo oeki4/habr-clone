@@ -30,6 +30,7 @@ import {
 	fetchArticleRecommendations
 } from "../model/services/fetchArticleRecommendations/fetchArticleRecommendations";
 import {articleDetailsPageReducer} from "../model/slice";
+import {ArticleDetailsPageHeader} from "pages/ArticleDetailsPage/ui/ArticleDetailsPageHeader/ArticleDetailsPageHeader";
 
 interface ArticleDetailsPageProps {
 	className?: string;
@@ -51,15 +52,12 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 	const recommendationsIsLoading = useSelector(getArticleRecommendationsIsLoading);
 	const recommendationsError = useSelector(getArticleRecommendationsError);
 	const dispatch = useAppDispatch();
-	const navigate = useNavigate();
+
 
 	const onSendComment = useCallback((text: string) => {
 		dispatch(addCommentForArticle(text));
 	}, [dispatch]);
 
-	const onBackToList = useCallback(() => {
-		navigate(RoutePath.articles);
-	}, [navigate]);
 
 	useInitialEffect(() => {
 		dispatch(fetchCommentsByArticleId(id));
@@ -77,9 +75,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 	return (
 		<DynamicModuleLoader reducers={reducers} removeAfterUnmount>
 			<Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-				<Button onClick={onBackToList} theme={ButtonTheme.OUTLINE}>
-					{t('Назад к списку')}
-				</Button>
+				<ArticleDetailsPageHeader/>
 				<ArticleDetails id={id}/>
 				<Text
 					className={cls.commentTitle}
