@@ -8,6 +8,7 @@ import {useInitialEffect} from "shared/lib/hooks/useInitialEffect/useInitialEffe
 import {useAppDispatch} from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 import {useSelector} from "react-redux";
 import {
+	getArticlesPageHasMore,
 	getArticlesPageIsLoading,
 	getArticlesPageView
 } from "../model/selectors/articlesPageSelectors";
@@ -38,7 +39,7 @@ const ArticlesPage = ({className}: ArticlesPageProps) => {
 	}, [dispatch])
 
 	useInitialEffect(() => {
-		dispatch(initArticlesPage(searchParams));
+			dispatch(initArticlesPage(searchParams));
 	})
 
 	return (
