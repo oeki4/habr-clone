@@ -1,4 +1,3 @@
-import cls from './ProfilePageHeader.module.scss';
 import {classNames} from "shared/lib/classNames/classNames";
 import {Text} from "shared/ui/Text/Text";
 import {Button, ButtonTheme} from "shared/ui/Button/Button";
@@ -8,6 +7,7 @@ import {useSelector} from "react-redux";
 import {useCallback} from "react";
 import {useAppDispatch} from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 import {getUserAuthData} from "entities/User";
+import {HStack} from "shared/ui/Stack/HStack/HStack";
 
 interface ProfilePageHeaderProps {
     className?: string;
@@ -39,43 +39,40 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
     }, [dispatch]);
 
     return (
-        <div className={classNames(cls.profilePageHeader, {}, [className])}>
+        <HStack max justify={'between'} className={classNames('', {}, [className])}>
             <Text title={t("Профиль")}/>
 					{
 						canEdit && (
-							<div className={cls.btnWrapper}>
+							<>
 								{readonly ?
 									(
 										<Button
 											theme={ButtonTheme.OUTLINE}
-											className={cls.editBtn}
 											onClick={onEdit}
 										>
 											{t("Редактировать")}
 										</Button>
 									) :
 									(
-										<>
+										<HStack gap={'8'}>
 											<Button
 												theme={ButtonTheme.OUTLINE}
-												className={cls.editBtn}
 												onClick={onSave}
 											>
 												{t("Сохранить")}
 											</Button>
 											<Button
 												theme={ButtonTheme.OUTLINE_RED}
-												className={cls.saveBtn}
 												onClick={onCancelEdit}
 											>
 												{t("Отменить")}
 											</Button>
-										</>
+										</HStack>
 									)
 								}
-							</div>
+							</>
 						)
 					}
-        </div>
+        </HStack>
     )
 }
