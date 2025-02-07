@@ -35,7 +35,7 @@ export const Navbar = memo(({className}: NavbarProps) => {
 
 	if(authData) {
 		return (
-			<div className={classNames(cls.navbar, {}, [className])}>
+			<header className={classNames(cls.navbar, {}, [className])}>
 				<Text
 					theme={TextTheme.INVERTED}
 					className={cls.appName}
@@ -58,7 +58,7 @@ export const Navbar = memo(({className}: NavbarProps) => {
 				{isAuthModal &&
 					<LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
 				}
-			</div>
+			</header>
 		)
 	}
 
