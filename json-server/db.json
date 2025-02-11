@@ -26,13 +26,13 @@
       "id": 1,
       "username": "admin",
       "password": "123",
-      "avatar": "https://freepngimg.com/download/temp_jpeg/11-2-anonymous-mask-png-image.jpeg"
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiWhCryaVjPgI6mIMZ_9SXWGJt-Zgz5j2ZyA&s"
     },
     {
       "id": 2,
       "username": "user",
       "password": "123",
-      "avatar": "https://freepngimg.com/download/temp_jpeg/11-2-anonymous-mask-png-image.jpeg"
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiWhCryaVjPgI6mIMZ_9SXWGJt-Zgz5j2ZyA&s"
     }
   ],
   "articles": [
