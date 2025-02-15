@@ -15,6 +15,7 @@ import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEffect";
 import { fetchCommentsByArticleId } from "pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId";
 import { useTranslation } from "react-i18next";
+import { VStack } from "shared/ui/Stack";
 
 interface ArticleDetailsCommentsProps {
   className?: string;
@@ -42,7 +43,7 @@ export const ArticleDetailsComments = memo(
     );
 
     return (
-      <div className={classNames("", {}, [className])}>
+      <VStack gap="8" max className={classNames("", {}, [className])}>
         <Text
           className={cls.commentTitle}
           size={TextSize.L}
@@ -50,7 +51,7 @@ export const ArticleDetailsComments = memo(
         />
         <AddCommentForm onSendComment={onSendComment} />
         <CommentList isLoading={commentsIsLoading} comments={comments} />
-      </div>
+      </VStack>
     );
   },
 );
